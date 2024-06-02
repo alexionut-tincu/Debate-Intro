@@ -209,14 +209,12 @@ tr:nth-child(even) {
 
 @media screen and (max-width: 600px) {
 	nav ul {
-	    flex-direction: column;
+		flex-direction: column;
 	}
 	.dropdown {
 		min-width: calc(100% - 20px);
 	}
+	#top {
+		flex-direction: column;
+	}
 }
-
-/*
-imagini
-
-*/
