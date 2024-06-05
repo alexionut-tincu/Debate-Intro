@@ -16,8 +16,8 @@
 body::before {
 	content: "";
 	position: fixed;
-	top: 0px;
-	left: 0px;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
 	background-image: url('background-academia.webp');
@@ -26,6 +26,8 @@ body::before {
 	background-attachment: fixed;
 	background-size: cover;
 	filter: blur(10px);
+	/* ^ aici nu am cum sa il fac relativ, ca se creeaza un efect ciudatel */
+	/* misto, dar ciudatel */
 	z-index: -1;
 	transform: scale(1.15);
 }
@@ -36,10 +38,11 @@ body {
 	justify-content: flex-start;
 	align-items: center;
 	height: auto;
-	margin: 0px;
+	margin: 0;
 
 	font-family: 'Noto Sans', sans-serif;
 	font-size: 16px;
+	/* ^ font sizeul mi se pare de bun simt sa fie fixat */
 	line-height: 1.45em;
 }
 
@@ -54,11 +57,11 @@ header {
 .logo {
 	display: flex;
 	justify-content: left;
-	width: 200px;
-	padding: 5px;
-	margin-top: 6px;
-	margin-bottom: 6px;
-	margin-left: 6px;
+	width: 30vw;
+	padding: 0.5vw;
+	margin-top: 0.5vh;
+	margin-bottom: 0.5vh;
+	margin-left: 0.5vw;
 	background-color: rgb(64, 0, 132);
 }
 
@@ -70,7 +73,7 @@ nav {
 	top: 0;
 	width: 100%;
 	z-index: 100;
-	padding-bottom: 4px;
+	padding-bottom: 0.3em;
 	background-color: rgb(52, 0, 88);
 }
 
@@ -93,7 +96,7 @@ nav li a {
 	display: block;
 	color: rgb(255, 255, 255);
 	text-align: center;
-	padding: 14px 16px;
+	padding: 1em 1em;
 	text-decoration: none;
 	line-height: 1;
 }
@@ -112,23 +115,23 @@ nav li a:hover, nav li a.active {
 	transform-origin: top;
 }
 
-li:hover .dropdown {
+nav li:hover .dropdown {
 	display: block;
 	width: auto;
 	animation: slideDown 0.3s ease-out forwards;
 }
 
 #main {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 2vh;
+	margin-bottom: 2vh;
 	width: 70%;
-	min-height: calc(100vh - 250px);
+	min-height: 70vh;
 	overflow-x: hidden;
 	flex-wrap: wrap;
 	overflow-y: auto;
 	background-color: rgba(188, 160, 255, 0.6);
-	padding: 20px;
-	border-radius: 10px;
+	padding: 3em;
+	border-radius: 1em;
 }
 
 #top {
@@ -138,37 +141,37 @@ li:hover .dropdown {
 
 #table-of-contents, #top-pic {
 	flex: 1;
-	margin: 30px;
+	margin: 7%;
 	height:fit-content;
 }
 
 #table-of-contents {
 	background-color: rgba(255, 255, 255, 0.669);
-	padding-left: 10px;
+	padding-left: 1em;
 }
 
 #top-pic img {
-	border: 5px groove black;
+	border: 0.3em groove black;
 	max-width: 100%;
 	height: auto;
 }
 
 div p:first-child {
-	text-indent: 0px;
+	text-indent: 0;
 }
 
 div p:first-child::first-letter {
 	font-family: 'Times New Roman', Times, serif;
-	font-size: 30px;
+	font-size: 2em;
 	font-weight: bolder;
 }
 
 p {
-	text-indent: 30px;
+	text-indent: 2em;
 }
 
 footer {
-	height: 60px;
+	height: 10vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -178,17 +181,16 @@ footer {
 	position: static;
 	background-color: rgba(16, 0, 67, 0.546);
 	z-index: 100;
-	border-top: 4px solid rgb(52, 0, 88);
+	border-top: 0.3em solid rgb(52, 0, 88);
 }
 
 footer > p {
 	color: rgba(245, 205, 255, 0.603);
-	font-size: 10px;
+	font-size: 0.6em;
 }
 
 footer > p:any-link {
 	color: rgba(245, 205, 255, 0.603);
-	font-size: 10px;
 }
 
 table {
@@ -199,7 +201,7 @@ table {
 }
 
 table, td, th {
-	border: 2px groove;
+	border: 0.12em groove;
 	border-color: rgb(8, 0, 69);
 }
 
@@ -207,12 +209,12 @@ tr:nth-child(even) {
 	background-color: rgba(100, 36, 169, 0.226);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
 	nav ul {
 		flex-direction: column;
 	}
 	.dropdown {
-		min-width: calc(100% - 20px);
+		min-width: 100%;
 	}
 	#top {
 		flex-direction: column;
