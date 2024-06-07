@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debate Central</title>
+    <meta charset="utf-8">
+    <meta name="author" content="alexionut05">
+    <meta name="description" content="A minimalist informational website about debate and public speaking. Project for Web Techniques course at FMI UB, Y1 S2">
+    <meta name="keywords" content="debate info debating public speaking">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
+    <link rel="stylesheet" href="styles-quiz.css" type="text/css">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <a href="/"><img class="logo" src="logo.png" alt="Logo"></a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li>
+                <a href="/history.html">History</a>
+                <ul class="dropdown">
+                    <li><a href="/history.html#worldwide">Worldwide</a></li>
+                    <li><a href="/history.html#romania">In Romania</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/formats.html">Formats</a>
+                <ul class="dropdown">
+                    <li><a href="/formats.html#ws">World Schools</a></li>
+                    <li><a href="/formats.html#bp">British Parliament</a></li>
+                    <li><a href="/formats.html#other">Other</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="/guides.html" class="active">Guides</a>
+                <ul class="dropdown">
+                    <li><a href="/guides.html#general">General</a></li>
+                    <li><a href="/guides.html#content">Content</a></li>
+                    <li><a href="/guides.html#style">Style</a></li>
+                    <li><a href="/guides.html#strategy">Strategy</a></li>
+                </ul>
+            </li>
+            <li><a href="/about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <h2>Account Management</h2>
+        <div id="account-management">
+            <h3>Create Account</h3>
+            <form id="register-form">
+                <label for="reg-username">Username:</label>
+                <input type="text" id="reg-username" name="username" required>
+                <br>
+                <label for="reg-password">Password:</label>
+                <input type="password" id="reg-password" name="password" required>
+                <br>
+                <button type="submit">Register</button>
+            </form>
+            <div id="register-message"></div>
+
+            <h3>Login</h3>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="username" required>
+                <br>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-message"></div>
+
+            <h3>Change Password</h3>
+            <form id="change-password-form">
+                <label for="change-username">Username:</label>
+                <input type="text" id="change-username" name="username" required>
+                <br>
+                <label for="old-password">Old Password:</label>
+                <input type="password" id="old-password" name="oldPassword" required>
+                <br>
+                <label for="new-password">New Password:</label>
+                <input type="password" id="new-password" name="newPassword" required>
+                <br>
+                <button type="submit">Change Password</button>
+            </form>
+            <div id="change-password-message"></div>
+
+            <h3>Delete Account</h3>
+            <form id="delete-account-form">
+                <label for="delete-username">Username:</label>
+                <input type="text" id="delete-username" name="username" required>
+                <br>
+                <label for="delete-password">Password:</label>
+                <input type="password" id="delete-password" name="password" required>
+                <br>
+                <button type="submit">Delete Account</button>
+            </form>
+            <div id="delete-account-message"></div>
+        </div>
+
+        <h2>Quiz</h2>
+        <div id="quiz-section" style="display: none;">
+            <form id="quiz-form">
+                <p>Question 1: Do you like debate?</p>
+                <input type="radio" id="q1a" name="q1" value="20">
+                <label for="q1a">Yes</label>
+                <br>
+                <input type="radio" id="q1b" name="q1" value="50">
+                <label for="q1b">YESSSS</label>
+                <br>
+                <input type="radio" id="q1c" name="q1" value="80">
+                <label for="q1c">All of the above</label>
+                <br>
+                <input type="radio" id="q1d" name="q1" value="0">
+                <label for="q1d">Nah, it's lame</label>
+                <br>
+
+                <p>Question 2: How many speakers are in a standard WS match?</p>
+                <input type="radio" id="q2a" name="q2" value="0">
+                <label for="q2a">4</label>
+                <br>
+                <input type="radio" id="q2b" name="q2" value="250">
+                <label for="q2b">6</label>
+                <br>
+                <input type="radio" id="q2c" name="q2" value="0">
+                <label for="q2c">8</label>
+                <br>
+                <input type="radio" id="q2d" name="q2" value="-1">
+                <label for="q2d">Dude, leave me alone already</label>
+                <br>
+
+                <p>Question 3: How many teams are there in a standard BP match?</p>
+                <input type="radio" id="q3a" name="q3" value="0">
+                <label for="q3a">2, duh</label>
+                <br>
+                <input type="radio" id="q3b" name="q3" value="0">
+                <label for="q3b">I don't know.</label>
+                <br>
+                <input type="radio" id="q3c" name="q3" value="250">
+                <label for="q3c">4 but actually 2 sides but actually 4</label>
+                <br>
+                <input type="radio" id="q3d" name="q3" value="0">
+                <label for="q3d">As many as we please, it's a FFA</label>
+                <br>
+
+                <p>Question 4: What is the biggest debate organisation in Romania?</p>
+                <input type="radio" id="q4a" name="q4" value="250">
+                <label for="q4a">ARDOR</label>
+                <br>
+                <input type="radio" id="q4b" name="q4" value="0">
+                <label for="q4b">ADOR</label>
+                <br>
+                <input type="radio" id="q4c" name="q4" value="0">
+                <label for="q4c">ARDEI</label>
+                <br>
+                <input type="radio" id="q4d" name="q4" value="0">
+                <label for="q4d">ANDREI</label>
+                <br>
+
+                <p>Question 5: How do you offer a POI (point of intervention), in a WS match?</p>
+                <input type="radio" id="q5a" name="q5" value="-9000">
+                <label for="q5a">Yell "ULTIMA SANSA!!!!1!" as loud as you can, so that the speaker in front of you knows for a FACT that you want to offer a POI</label>
+                <br>
+                <input type="radio" id="q5b" name="q5" value="0">
+                <label for="q5b">You don't. Ever.</label>
+                <br>
+                <input type="radio" id="q5c" name="q5" value="100">
+                <label for="q5c">You raise your hand and keep your hand raised until they notice and nominate you</label>
+                <br>
+                <input type="radio" id="q5d" name="q5" value="250">
+                <label for="q5d">You stand up, with your hand up like the Statue of Liberty, politely say "Interventie" or "POI", and stand there for either until you are allowed, denied, or until your legs give up trying</label>
+                <br>
+
+                <p>Question 6: What would your best plan be during a WS debate match?</p>
+                <input type="radio" id="q6a" name="q6" value="5">
+                <label for="q6a">Prayers and hope</label>
+                <br>
+                <input type="radio" id="q6b" name="q6" value="75">
+                <label for="q6b">Maybe read your team's case before the match and not after it (definitely couldn't be me)</label>
+                <br>
+                <input type="radio" id="q6c" name="q6" value="50">
+                <label for="q6c">Keep your cool</label>
+                <br>
+                <input type="radio" id="q6d" name="q6" value="150">
+                <label for="q6d">All of the above</label>
+                <br>
+                <input type="radio" id="q6e" name="q6" value="-100">
+                <label for="q6e">Bribe the judge</label>
+                <br>
+                <input type="radio" id="q6f" name="q6" value="-50">
+                <label for="q6f">Bribe the enemy team</label>
+                <br>
+
+                <button type="submit">Submit Quiz</button>
+            </form>
+            <div id="quiz-message"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Debate Central. All rights reserved.</p>
+    </footer>
+
+    <script src="register.js"></script>
+    <script src="login.js"></script>
+    <script src="changePassword.js"></script>
+    <script src="deleteAccount.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
